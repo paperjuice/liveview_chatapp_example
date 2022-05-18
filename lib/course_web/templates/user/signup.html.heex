@@ -1,0 +1,19 @@
+<%= form_for @changeset, Routes.user_path(@conn, :signup), fn f -> %>
+ <label>
+    Nickname: <%= text_input f, :nickname%>
+  </label>
+
+  <label>
+    Email: <%= text_input f, :email%>
+  </label>
+
+  <label>
+    Password: <%= text_input f, :password, type: :password %>
+  </label>
+
+  <label>
+    Confirm password: <%= text_input f, :confirmed_password, type: :password %>
+  </label>
+
+  <%= submit "Sign up" %>
+<% end %>

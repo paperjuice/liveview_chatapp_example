@@ -1,0 +1,14 @@
+<div>
+
+  <%= if @current_user do %>
+    <div>
+      <%= button("Logout", to: "/logout", method: :delete) %>
+    </div>
+  <% else %>
+    <div>
+      <%= button("Sign Up", to: "/signup", method: :get) %>
+      <%= button("Login", to: "/login", method: :get) %>
+    </div>
+  <% end%>
+
+</div>

@@ -1,0 +1,17 @@
+<div>
+  <div>
+    <%= @update %>
+    --------------------
+    --------------------------------------------
+    <%= for f <- @messages do %>
+    <div><%= f.user.nickname %>: <%= f.content%></div>
+    <% end %>
+    ------------------
+  </div>
+  <div>
+    <.form let={f} for={:message} phx-submit="add">
+    <%= text_input f, :input %>
+    <%= submit "Send message" %>
+    </.form>
+  </div>
+</div>
